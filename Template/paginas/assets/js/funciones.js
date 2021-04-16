@@ -26,13 +26,14 @@ function passData(id, titulo) {
   //  document.getElementById("load").innerHTML = '<img  class="rounded mx-auto d-block" alt="Responsive image"'+ 
   //    'id="loading-image" src="https://res.cloudinary.com/mtac/image/upload/v1618507609/moneySpinner_cgpxci.gif" />';
 //}
-
-document.getElementById("form-submit").addEventListener("submit", function () {
-    $('#SpinModal').modal({
-        backdrop: 'static',
-        keyboard: false
+var existe = document.getElementById("form-submit");
+if(existe){
+    document.getElementById("form-submit").addEventListener("submit", function () {
+        $('#SpinModal').modal({
+            backdrop: 'static',
+            keyboard: false
+        });
     });
-});
-
+}
 
  
