@@ -48,7 +48,7 @@ def Bienvenido(request):
 
 def Reporte_Act(request):
 
-    try:
+    
         obj = storageData(request)    
         usuarios = reporteApiUsuarios(request)
         context ={
@@ -61,9 +61,7 @@ def Reporte_Act(request):
             'usuarios':usuarios, 
         }
         return render(request, "accTemplate/reporte.html",context = context)
-    except Exception as e:
-        logger.error(e)
-        return redirect('/login')
+    
 
 def Modulo(request):
 
@@ -81,7 +79,7 @@ def Modulo(request):
 
 
 def Historial(request):
-    try:
+    
         reporte = Reporte.objects.values_list('cod_rep',
                                                 'nom_act',
                                                 'fecha_act',
@@ -118,9 +116,7 @@ def Historial(request):
                 'resultPago': refresh[1], 
             }
             return render(request, "accTemplate/Historial.html", context = context)
-    except Exception as e:
-        logger.error(e)
-        return redirect('/login')
+    
           
 def graphs(request):
     try:
@@ -215,8 +211,6 @@ def processData(request, data):
         if parsedJsonObject['group']['name'] != 'Network administrators':
             Persona.objects.update(cod_comunidad= parsedJsonObject['group']['id'])
             
-           
-
  
 def datainBienvenido(request):
     """
