@@ -144,7 +144,7 @@
       <div class="col"  style="padding-top: 50px;padding-left: 10px; padding-bottom:50px">
         <legend class="text-center" style="font-size: 19px;color: rgb(0,0,0);">Confirmar participantes de la actividad comunitaria</legend>
         
-        <form action="/Historial/" method="POST" id="form-submit" >
+        <form action="/Historial/" method="POST" id="form-submit" onsubmit="spinner()" >
         <div>
             {% csrf_token %}
             <fieldset style="text-align: center;">
