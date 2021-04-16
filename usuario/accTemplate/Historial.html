@@ -144,7 +144,7 @@
       <div class="col"  style="padding-top: 50px;padding-left: 10px; padding-bottom:50px">
         <legend class="text-center" style="font-size: 19px;color: rgb(0,0,0);">Confirmar participantes de la actividad comunitaria</legend>
         
-        <form action="/Historial/" method="POST" id="form-submit" onsubmit="spinner()" >
+        <form action="/Historial/" method="POST" id="form-submit"  >
         <div>
             {% csrf_token %}
             <fieldset style="text-align: center;">
@@ -163,7 +163,7 @@
                     <label class="custom-control-label" for="{{ forloop.counter }}{{elemnts.0}}">Falta 2da autorización</label>
                 </div>  
                 <div class="col" style="padding-top: 10px;text-align: center; ">
-                     <button class="btn btn-primary" type="submit"  style="background: #347ab8;"  >Confirmar</button>
+                     <button class="btn btn-primary" type="submit"  style="background: #347ab8;" data-toggle="modal" data-target="#SpinModal"  >Confirmar</button>
                 </div>
                 {% endif %}
 
@@ -181,7 +181,7 @@
                 </div>  
                 <div class="col" style="padding-top: 10px;text-align: center; ">
 
-                    <button class="btn btn-primary"  type="submit" id="btnConfirm" style="background: #347ab8;" >Confirmar</button>
+                    <button class="btn btn-primary"  type="submit" id="btnConfirm" data-toggle="modal" data-target="#SpinModal" style="background: #347ab8;" >Confirmar</button>
                     
                 </div>
                 {% endif %}
