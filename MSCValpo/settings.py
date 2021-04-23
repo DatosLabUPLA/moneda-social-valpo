@@ -32,6 +32,7 @@ CORS_ALLOWED_ORIGINS = [
 ]
 
 
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -120,7 +121,7 @@ if DEBUG == True:
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
             'NAME': 'Mscvalpo',
             'USER': 'postgres',
-            'PASSWORD': '741852963',
+            'PASSWORD': 'm741852963',
             'HOST': 'localhost',
             'PORT': '5432',
         }
